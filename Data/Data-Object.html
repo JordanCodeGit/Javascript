@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            "full name" : "Miles Prower", // add "" kalo kata lebih dari 1
+            address : "Singapore",
+            age : 18
+        };
+
+        // ubah property / attribute
+        // person["name"] = "Miles Tails Prower";
+        // person["address"] = "Singapore";
+        // person["age"] = 18;
+
+        console.info(`name : ${person["full name"]}`);
+        console.info(`address : ${person.address}`);
+        console.info(`age : ${person.age}`);
+
+        console.table(person);
+
+        delete person["age"];
+
+        console.table(person);
+
+    </script>
+</body>
+</html>

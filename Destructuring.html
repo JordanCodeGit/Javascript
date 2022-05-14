@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+
+        {
+            // Destructuring Array
+            const names = ["Miles", "Tails", "Prower", "The", "Fox"];
+            const [firstName, middleName, lastName, ...others] = names;
+            
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+            console.info(others);
+        }
+
+        {
+            // Destructuring Object
+            const fox = {
+                firstName: "Miles",
+                lastName: "Prower",
+                address: {
+                    street: "St. Fox",
+                    city: "Mobius",
+                    country: "Sega"
+                },
+                hobby: "Inventing",
+                channel: "Miles Prower Channel"
+            };
+            //Destructuring Nested Object
+            const {firstName, lastName, address:{country, city, street}, ...others} = fox;
+            console.info(firstName);
+            console.info(lastName);
+            console.info(country);
+            console.info(city);
+            console.info(street);
+            console.info(others);
+        }
+
+        {
+            // Destructuring Function Parameter (1)
+            function displayPerson({firstName, middleName, lastName}) {
+                console.info(firstName)
+                console.info(middleName)
+                console.info(lastName)
+            }
+
+            const person = {
+                firstName: "Miles",
+                middleName: "Tails",
+                lastName: "Prower"
+            };
+            displayPerson(person);
+
+            // Destructuring Function Parameter (2)
+            function sum([first, second]) {
+                return first + second;
+            }
+
+                console.info(sum([11, 11])); // 22
+                console.info(sum([10, 10])); // 20
+                console.info(sum([20, 10])); // 30
+        }
+
+        {
+            // Deconstructing Default Value
+            const names = ["Miles", "Tails"];
+            const [firstName, middleName, lastName = "Prower"] = names;
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+        {
+            // Deconstructing Default Value
+            const tails = {
+                firstName: "Miles",
+                lastName: "Prower"
+            };
+
+            const {firstName, middleName = "Tails", lastName} = tails;
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        {
+            // Deconstructing dengan nama variabel lain
+            const tails = {
+                firstName: "Miles",
+                lastName: "Prower"
+            };
+
+            const {
+                firstName: namaDepan,
+                middleName: namaTengah = "Tails",
+                lastName: namaBelakang} = tails;
+
+            console.info(namaDepan);
+            console.info(namaTengah);
+            console.info(namaBelakang);
+        }
+        
+
+
+    </script>
+</body>
+</html>

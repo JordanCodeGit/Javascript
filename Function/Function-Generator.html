@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Generator</title>
+</head>
+<body>
+    <script>
+
+        // Generator sederhana
+        function* createNames(){
+            yield "Miles";
+            yield "Tails";
+            yield "Prower";
+        }
+        const names = createNames();
+        for (const name of names) {
+            console.info(name);
+        }
+
+        // Generator kompleks (lazy)
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    // Pembuktian bahwa Generator bersifat lazy
+                    console.info(`Yield ${i}`);
+                    yield i;
+                }
+            }
+        }
+
+        // Perulangan (eager)
+        function* buatGanjilArray(value) {
+            const result = []
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Yield ${i}`);
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+        // Pemanggilan antara kedua generator
+        const angkaGanjil = buatGanjil(100);
+        for (const angka of angkaGanjil) {
+            console.info(angka);
+        }
+
+        /*
+        Pemanggilan data satu per satu dari generator kompleks
+        Tetapi syntax pemanggilan diatas harus dimatikan
+        terlebih dahulu
+
+        Jika tidak, maka akan muncul undefined
+        */
+        console.info(angkaGanjil.next().value);
+        console.info(angkaGanjil.next().value);
+        console.info(angkaGanjil.next().value);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Default Parameter</title>
+</head>
+<body>
+    <script>
+        /* Jika value pada 'gender' kosong,
+        maka otomatis diisi dengan 'UNKNOWN'.
+        Itu disebut default value
+        */
+        function register(name, gender = "UNKNOWN") {
+            console.info(name);
+            console.info(gender);
+        }
+
+        register();
+        register("Miles");
+        register("Miles", "Male");
+
+        
+
+    </script>
+</body>
+</html>

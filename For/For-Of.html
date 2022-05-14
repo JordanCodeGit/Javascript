@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Of</title>
+</head>
+<body>
+    <script>
+
+        // Memunculkan first, middle, and last name (Array)
+        const names = ["Miles", "Tails", "Prower"];
+        for (const name of names){
+            document.writeln(`<p>${name}</p>`);
+        }
+        
+        // Memunculkan karakter 1 per 1 (String)
+        const fullName = "Miles Tails Prower";
+        for (const character of fullName){
+            document.writeln(`<p>${character}</p>`);
+        }
+
+        // Error jika memaksakan data selain "String" & "Array"
+        const person = {
+            firstName: "Miles",
+            lastName: "Prower"
+        };
+        for (const name of person){
+            document.writeln(`<p>${name}</p>`);
+        }
+
+    </script>
+</body>
+</html>

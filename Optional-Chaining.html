@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Optional Chaining</title>
+</head>
+<body>
+    <script>
+
+        /* Menggunakan Optional Chaining untuk mengakses
+        variabel yg memiliki nilai null atau undefined
+        */
+        const person = {};
+
+        const country = person?.address?.country;
+
+        document.writeln(`<p>${country}</p>`);
+
+        document.writeln("Sukses");
+
+    </script>
+</body>
+</html>

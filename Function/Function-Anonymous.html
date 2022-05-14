@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Anonymous</title>
+</head>
+<body>
+    <script>
+
+        // Function yang belum diketahui value nya
+        const say = function(name){
+            document.writeln(`<p>Hello ${name}</p>`);
+        }
+
+        say("Miles"); //Hello Miles
+        say("Prower"); //Hello Prower
+
+        function giveMeName(callback){
+            callback("Tails");
+        }
+
+        giveMeName(say); //Hello Tails
+
+
+        // All of these are 'Hi Tails'
+        giveMeName(function(name){
+            document.writeln(`<p>Hi ${name}</p>`);
+        });
+
+        giveMeName(function(name){
+            document.writeln(`<p>Hi ${name}</p>`);
+        });
+
+        giveMeName(function(name){
+            document.writeln(`<p>Hi ${name}</p>`);
+        });
+
+    </script>
+</body>
+</html>

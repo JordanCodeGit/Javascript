@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For In</title>
+</head>
+<body>
+    <script>
+
+        //For In untuk mengakses value const
+        const person = {
+            firstName: "Miles",
+            middleName: "Tails",
+            lastName: "Prower"
+        };
+
+        for(const property in person){
+            document.writeln(`<p>${property} : ${person[property]}</p>`);
+        }
+
+        //For In untuk Array
+        const names = ["Miles", "Tails", "Prower"];
+        for(const index in names){
+            document.writeln(`<p>${index} : ${names[index]}</p>`);
+        }
+
+    </script>
+</body>
+</html>

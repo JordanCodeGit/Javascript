@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+    <script>
+
+        let arrayKosong = [];
+
+        let arrayNama = ["Miles", "Tails", "Prower"];
+
+        const names = [];
+        names.push("Miles")
+        names.push("Tails", "Prower");
+        names.push("Jong", "Jordan", "Joedan");
+
+        //Menunjukkan data dari variabel 'names' dalam bentuk tabel
+        console.table(names);
+
+        //Menunjukkan data 'Miles' dari variabel names
+        console.info(names[0]);
+        //Menunjukkan data 'Tails'
+        console.info(names[1]);
+        //Menunjukkan data 'Prower'
+        console.info(names[2]);
+
+        //Mengatur index 0 - 2 menjadi "Programmer, This, Generation"
+        names[0] = "Programmer";
+        names[1] = "This";
+        names[2] = "Generation";
+
+        console.table(names);
+
+        delete names[3];
+
+        console.table(names);
+
+        names.push("Miles again");
+
+        console.table(names);
+
+        names[3] = "Prower again";
+        names.push(1,2,3,4,5);
+        names.push(["Miles", "Tails", "Prower",]);
+
+        console.table(names);
+
+
+    </script>
+</body>
+</html>

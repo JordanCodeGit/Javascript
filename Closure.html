@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Closure</title>
+</head>
+<body>
+    <script>
+
+        function createAdder(value){
+            const owner = "Miles";
+
+            function add(param){
+                console.info(owner);
+                return value + param;
+            }
+
+            return add;
+        }
+
+        const addTwo = createAdder(2);
+        console.info(addTwo(10)); // 12
+        console.info(addTwo(20)); // 22
+        // Syntax diatas sama dengan syntax di komentar bawah ini
+        
+        // function addTwo(param){
+        //    console.info("Prower")
+        //    return 2 + param;
+        // }
+
+        const addTen = createAdder(10);
+        console.info(addTen(10)); // 20
+        console.info(addTen(20)); // 30
+        
+
+    </script>
+</body>
+</html>

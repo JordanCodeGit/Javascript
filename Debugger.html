@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debugger</title>
+</head>
+<body>
+    <script>
+
+        /* 
+        Debugger digunakan untuk menghentikan proses
+        dalam proses 'debugging' untuk memudahkan mencari
+        error pada syntax. Hanya didukung oleh beberapa
+        browser
+        */
+        
+        function createFullName(firstName, middleName, lastName) {
+            debugger;
+            const fullName = `${firstName} ${middleName} ${lastName}`;
+            return fullName;
+        } 
+
+        const name = createFullName('Miles', 'Tails', 'Prower');
+        console.info(name); // Miles Tails Prower
+
+        function sum(...numbers){
+            debugger;
+            let total = 0;
+            for (const number of numbers) {
+                total += number;
+            }
+            return total;
+        }
+
+        console.info(sum(1, 1, 1, 1, 1)); // 5
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Method</title>
+</head>
+<body>
+    <script>
+
+        // Membuat object dengan method
+        const person = {
+            name: "Miles",
+            sayHello: function (name){
+                alert(`Hello ${name}`);
+            }
+        };
+        
+        person.sayHello("Prower")
+
+        // Menambah method ke object
+        const fox = {
+            name: "Miles"
+        };
+
+        fox.sayHey = function (name) {
+            alert(`Hey ${name}`);
+        };
+
+        fox.sayHey("Prower")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kata Kunci This</title>
+</head>
+<body>
+    <script>
+
+        // This di Global Scope
+        console.info(this); // Window
+
+        // This di Function
+        function sample(){
+            console.info(this); // Window
+
+            function inner(){
+                console.info(this); // Window
+            }
+
+            inner(); 
+        }
+
+        sample(); 
+
+        // This di Object Method
+        const person = {
+            name: "Miles",
+            sayHello: function (value) {
+                // This = person
+                console.info(`Hello ${value}, my name is ${this.name}`);
+            }
+        }
+
+        person.sayHello("Prower"); // Hello Prower, my name is Miles
+        person.sayHello("Tails"); // Hello Tails, my name is Miles
+
+    </script>
+</body>
+</html>

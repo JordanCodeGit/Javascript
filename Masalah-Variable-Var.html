@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Masalah Variabel Var</title>
+</head>
+<body>
+    <script>
+
+        // Let
+        // Global scope
+        let i = 20;
+
+        for (let i = 0; i < 10; i++) {
+            // Local scope
+           console.info(`Local ${i}`);
+        }
+
+        console.info(`Global ${i}`); // Berhasil mengambil data dari global scope
+
+        // Var
+        // Global scope
+        var j = 20;
+
+        for (var j = 0; j < 10; j++) {
+            // Local scope
+           console.info(`Local ${j}`);
+        }
+
+        console.info(`Global ${j}`); // Gagal mengambil value dari global scope
+        // Value yang diambil adalah 10
+
+    </script>
+</body>
+</html>
